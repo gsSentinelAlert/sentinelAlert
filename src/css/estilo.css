@@ -9,6 +9,12 @@
     --card-color: #16263d;
     --primary-color: #2ea8ff;
     --secondary-color: #67c7ff;
+    --blue-color: #2ea8ff;
+    --blue-secondary: #67c7ff;
+    --green-color: #38d66b;
+    --green-secondary: #14a83e;
+    --red-color: #ff4d4d;
+    --red-secondary: #d91c1c;
     --text-color: #ffffff;
     --text-secondary: #b7c4d6;
     --border-color: #223754;
@@ -187,6 +193,39 @@ nav a:hover{
     color: var(--text-secondary);
     line-height: 1.6;
 }
+#contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+#contact-form input,
+#contact-form textarea{
+    width: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    color: var(--text-color);
+    font-size: 16px;
+}
+#contact-form button{
+    width: 450px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#contact-form button:hover{
+    transform: scale(1.03);
+    background: var(--secondary-color);
+}
 footer{
     background: #050b14;
     padding: 40px;
@@ -196,6 +235,144 @@ footer{
 footer p{
     margin: 10px 0;
     color: var(--text-secondary);
+}
+/* TEMAS */
+.tema-section{
+    padding: 120px 10%;
+    background: var(--bg-color);
+    text-align: center;
+}
+.tema-section h2{
+    font-size: 55px;
+    color: var(--primary-color);
+    margin-bottom: 70px;
+    font-family: 'Orbitron', sans-serif;
+}
+.tema-cards{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.tema-card{
+    width: 320px;
+    padding: 50px 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+.tema-card.blue{
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 25px var(--shadow-color);
+}
+.tema-card.green{
+    border: 2px solid var(--green-color);
+    box-shadow: 0 0 25px rgba(56,214,107,0.3);
+}
+.tema-card.red{
+    border: 2px solid var(--red-color);
+    box-shadow: 0 0 25px rgba(255,77,77,0.3);
+}
+.tema-card:hover{
+    transform: translateY(-10px) scale(1.03);
+}
+.tema-card i{
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+.tema-card.blue i{
+    color: var(--blue-color);
+}
+.tema-card.green i{
+    color: var(--green-color);
+}
+.tema-card.red i{
+    color: var(--red-color);
+}
+.tema-card h4{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.tema-card p{
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+.theme-btn{
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* BOTÕES */
+.tema-card.blue .theme-btn{
+    background: linear-gradient(135deg, var(--blue-color), var(--blue-secondary));
+    box-shadow: 0 0 20px rgba(46,168,255,0.5);
+}
+.tema-card.green .theme-btn{
+    background: linear-gradient(135deg, var(--green-color), var(--green-secondary));
+    box-shadow: 0 0 20px rgba(56,214,107,0.5);
+}
+.tema-card.red .theme-btn{
+    background: linear-gradient(135deg, var(--red-color), var(--red-secondary));
+    box-shadow: 0 0 20px rgba(255,77,77,0.5);
+}
+.theme-btn:hover{
+    transform: scale(1.05);
+}
+/* QUIZ */
+.quiz-section{
+    padding: 120px 10%;
+    background: var(--secondary-bg);
+    text-align: center;
+}
+.quiz-section h2{
+    font-size: 60px;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+#quiz-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#quiz-form input{
+    width: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    color: white;
+    font-size: 16px;
+}
+#quiz-form button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#quiz-form button:hover{
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+#resultado{
+    margin-top: 30px;
+    font-size: 22px;
+    color: var(--secondary-color);
 }
 /* RESPONSIVO */
 @media(max-width: 900px){
@@ -218,5 +395,17 @@ footer p{
     }
     .hero-content p{
         font-size: 18px;
+    }
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button{
+    width: 100%;
+    }
+    #quiz-form input{
+    width: 100%;
+    }
+    .tema-card,
+    .card{
+    width: 100%;
     }
 }
