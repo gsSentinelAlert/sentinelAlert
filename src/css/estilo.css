@@ -93,6 +93,22 @@ nav a:hover{
     background: var(--secondary-color);
     transform: scale(1.05);
 }
+.slideshow-section{
+    width: 100%;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-bg);
+}
+.slideshow-section img{
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 25px var(--shadow-color);
+}
 .content{
     padding: 120px 10%;
     display: flex;
