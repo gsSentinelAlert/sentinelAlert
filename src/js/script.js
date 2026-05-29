@@ -23,14 +23,17 @@ botoesTema.forEach(function(botao){
         if(tema == "blue"){
             document.documentElement.style.setProperty("--bg-color", "#07111f");
             document.documentElement.style.setProperty("--primary-color", "#2ea8ff");
+            document.documentElement.style.setProperty("--secondary-color", "#67c7ff");
         }
         if(tema == "green"){
             document.documentElement.style.setProperty("--bg-color", "#07150f");
             document.documentElement.style.setProperty("--primary-color", "#38d66b");
+            document.documentElement.style.setProperty("--secondary-color", "#14a83e");
         }
         if(tema == "red"){
             document.documentElement.style.setProperty("--bg-color", "#1a0a0a");
             document.documentElement.style.setProperty("--primary-color", "#ff4d4d");
+            document.documentElement.style.setProperty("--secondary-color", "#d91c1c");
         }
     });
 });
