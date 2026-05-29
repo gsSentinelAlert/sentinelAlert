@@ -49,3 +49,55 @@ formulario.addEventListener("submit", function(evento){
         formulario.reset();
     }
 });
+const quiz = document.getElementById("quiz-form");
+
+quiz.addEventListener("submit", function(evento){
+    evento.preventDefault();
+    let pontos = 0;
+
+    // PERGUNTA 1
+    if(document.getElementById("q1").value.toLowerCase() == "nasa"){
+        pontos++;
+    }
+    // PERGUNTA 2
+    const resposta2 = document.getElementById("q2").value.toLowerCase();
+    if(resposta2 == "enchentes" || resposta2 == "alagamentos"){
+        pontos++;
+    }
+    // PERGUNTA 3
+    if(document.getElementById("q3").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 4
+    if(document.getElementById("q4").value.toLowerCase() == "inpe"){
+        pontos++;
+    }
+    // PERGUNTA 5
+    if(document.getElementById("q5").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 6
+    if(document.getElementById("q6").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 7
+    if(document.getElementById("q7").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 8
+    if(document.getElementById("q8").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 9
+    if(document.getElementById("q9").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // PERGUNTA 10
+    if(document.getElementById("q10").value.toLowerCase() == "sim"){
+        pontos++;
+    }
+    // RESULTADO
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML =
+        "Você acertou " + pontos + " de 10 perguntas.";
+    });
