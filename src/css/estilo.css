@@ -23,6 +23,9 @@
 html{
     scroll-behavior: smooth;
 }
+section{
+    scroll-margin-top: 120px;
+}
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -202,7 +205,8 @@ nav a:hover{
 }
 #contact-form input,
 #contact-form textarea{
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     padding: 15px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
@@ -215,7 +219,8 @@ nav a:hover{
     height: 120px;
 }
 #contact-form button{
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     padding: 15px;
     border: none;
     border-radius: 10px;
@@ -342,6 +347,7 @@ footer p{
     font-size: 60px;
     color: var(--primary-color);
     margin-bottom: 50px;
+    text-align: center;
 }
 #quiz-form{
     display: flex;
@@ -349,8 +355,17 @@ footer p{
     align-items: center;
     gap: 20px;
 }
+#quiz-form label{
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    color: var(--text-color);
+    font-size: 18px;
+    margin-top: 10px;
+}
 #quiz-form input{
-    width: 350px;
+    width: 100%;
+    max-width: 700px;
     padding: 15px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
@@ -403,13 +418,41 @@ footer p{
     #contact-form input,
     #contact-form textarea,
     #contact-form button{
-    width: 100%;
+        width: 100%;
     }
     #quiz-form input{
     width: 100%;
     }
     .tema-card,
     .card{
-    width: 100%;
+        width: 100%;
+    }
+    .quiz-section h3{
+    font-size: 36px;
+    line-height: 1.2;
+    }
+    #quiz-form{
+        width: 100%;
+    }
+    #quiz-form input{
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+    }
+    #quiz-form button{
+        width: 100%;
+        max-width: 300px;
+    }
+    #quiz-form label{
+    font-size: 15px;
+    }
+    .quiz-section{
+    padding: 80px 5%;
+    }
+    nav{
+    gap: 15px;
+    }
+    nav a{
+    font-size: 14px;
     }
 }
