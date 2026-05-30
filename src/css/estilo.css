@@ -421,15 +421,15 @@ footer p{
         width: 100%;
     }
     #quiz-form input{
-    width: 100%;
+        width: 100%;
     }
     .tema-card,
     .card{
         width: 100%;
     }
     .quiz-section h3{
-    font-size: 36px;
-    line-height: 1.2;
+        font-size: 36px;
+        line-height: 1.2;
     }
     #quiz-form{
         width: 100%;
@@ -444,15 +444,15 @@ footer p{
         max-width: 300px;
     }
     #quiz-form label{
-    font-size: 15px;
+        font-size: 15px;
     }
     .quiz-section{
-    padding: 80px 5%;
+        padding: 80px 5%;
     }
     nav{
-    gap: 15px;
+        gap: 15px;
     }
     nav a{
-    font-size: 14px;
+        font-size: 14px;
     }
 }
